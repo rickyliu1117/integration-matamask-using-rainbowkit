@@ -5,6 +5,8 @@ import ConnectButton from './ConnectButton'
 import { useData } from "@/contexts/showSideBarContext";
 import Sidebar from './Sidebar';
 import { usePathname } from 'next/navigation'
+import App  from "../rainbowkit/App"
+
 export default function LandingHeader() {
     const { showSideBar, setShowSideBar } = useData();
     const pathname = usePathname()
@@ -41,6 +43,7 @@ export default function LandingHeader() {
                                     className='rounded-full'
                                     onClick={() => setShowSideBar(!showSideBar)}
                                 />
+                                <App />
                                 <ConnectButton />
                             </div >
                         )
